@@ -1,0 +1,25 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-header custom-header text-white text-center">Authentication</div>
+                <div class="card-body">
+                    <form [formGroup]="userFormGroup" (ngSubmit)="handelelogin()">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username:</label>
+                            <input type="text" id="username" formControlName="username" class="form-control" placeholder="Enter your username">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password:</label>
+                            <input type="password" id="password" formControlName="password" class="form-control" placeholder="Enter your password">
+                        </div>
+                        <button class="btn btn-success btn-lg btn-block" type="submit" (click)="animateButton()">Login</button>
+                    </form>
+                </div>
+                <div class="card-footer text-center">
+                    <span>Not registered? <a routerLink="/register" class="link-info">Register/Signup here</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

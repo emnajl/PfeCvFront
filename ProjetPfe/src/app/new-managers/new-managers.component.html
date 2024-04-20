@@ -1,0 +1,36 @@
+
+<app-navbar>
+<div class="container">
+    <div class ="card" col-md-6 offset-3>
+        <div class="card-header">New Manager</div>
+        <div class="card-body">
+            <form [formGroup]="newManagerFormGroup" (ngSubmit)="handelSaveManager()">
+                <div class="mb-3">
+                    <label class="form-label">Name:</label>
+                    <input type="text" formControlName="name" class="form-control">
+                    <span class="text-danger"
+                        *ngIf="newManagerFormGroup.controls['name'].touched
+                         && newManagerFormGroup.controls['name'].errors
+                         && newManagerFormGroup.controls['name'].errors!['required']">
+                     Name is Required
+                    </span>   
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email:</label>
+                    <input type="text" formControlName="email" class="form-control">
+                    <span class="text-danger"
+                        *ngIf="newManagerFormGroup.controls['email'].touched
+                         && newManagerFormGroup.controls['email'].errors
+                         && newManagerFormGroup.controls['email'].errors!['required']">
+                      Email is not valid
+                    </span>   
+                </div>
+                <button [disabled]="!newManagerFormGroup.valid" class="btn btn-info">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+</app-navbar>
+
+
+    

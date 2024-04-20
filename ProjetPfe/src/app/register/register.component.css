@@ -1,0 +1,4 @@
+.custom-header {
+    background-color: #c1efde;
+    color: #000 !important; /* Ajouter !important pour forcer la priorité */
+}
